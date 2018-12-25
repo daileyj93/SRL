@@ -248,7 +248,7 @@ begin
     SRL.FindColors(TPA, CTS0(Color), Chatbox.GetBounds);
 
     for TPA in FindTPARows(TPA) do
-      if Length(TPA) > 20 then
+      if Length(TPA) > 10 then
         ATPA += TPA;
   end;
 
