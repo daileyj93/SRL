@@ -250,7 +250,7 @@ begin
     SRL.FindColors(TPA, CTS0(Color), Chatbox.GetBounds);
 
     for TPA in FindTPARows(TPA) do
-      if (Length(TPA) >= 5) and (Length(TPA) * 2 >= Length(TPA.Invert())) then
+      if (Length(TPA) >= 5) and (Length(TPA) * 2.5 >= Length(TPA.Invert())) then
         ATPA += TPA;
   end;
 
