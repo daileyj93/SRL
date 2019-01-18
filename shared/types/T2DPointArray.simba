@@ -73,7 +73,7 @@ begin
   begin
     L := Length(Self);
     SetLength(Self, Length(Arr) + L);
-    MemMove(Arr[0], Self[L], Length(Arr)*SizeOf(arr[0]));
+    MemMove(Arr[0], Self[L], SizeOf(arr));
   end;
 end; 
 
