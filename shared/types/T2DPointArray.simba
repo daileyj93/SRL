@@ -67,13 +67,18 @@ begin
 end;
 
 procedure T2DPointArray.Extend(Arr:T2DPointArray);
-var L:Int32;
+var 
+  L: Int32;
+  TPA: TPointArray;
 begin
   if Length(arr) > 0 then
   begin
     L := Length(Self);
     SetLength(Self, Length(Arr) + L);
-    MemMove(Arr[0], Self[L], Length(Arr)*SizeOf(arr[0]));
+    for TPA in Arr do
+    begin
+      MemMove(TPA, Self[L], Length(TPA)*SizeOf(TPoint));
+    end;
   end;
 end; 
 
