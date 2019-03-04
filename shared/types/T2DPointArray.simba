@@ -78,6 +78,7 @@ begin
     for TPA in Arr do
     begin
       MemMove(TPA, Self[L], Length(TPA)*SizeOf(TPoint));
+      L += 1;
     end;
   end;
 end; 
