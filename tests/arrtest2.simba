@@ -13,8 +13,12 @@ begin
     arrA.Append(Point(Random(100), Random(100)));
     arrB.Append(Point(Random(100), Random(100)));
   end;
+  Writeln(arrA);
+  Writeln('++++++++++++++++');
   arrA.Extend(arrB);
-  //Writeln(arr1);
+  Writeln(arrA);
+  Writeln('++++++++++++++++');
+  Writeln(arrB);
   Writeln(Length(ArrA)*SizeOf(arrA[0]));
   Writeln(SizeOf(arrA));
 end.

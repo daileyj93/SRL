@@ -8,11 +8,11 @@ var
 begin
   ClearDebug();
 
-  for i := 0 to 3 do
+  for i := 0 to 5000 do
   begin
     arrA.Del(0, arrA.Len);
     arrB.Del(0, arrB.Len);
-    for j := 0 to Random(4) do
+    for j := 0 to 1000 do
     begin
       arrA.Append(Point(Random(100), Random(100)));
       arrB.Append(Point(Random(100), Random(100)));
@@ -20,8 +20,11 @@ begin
     arr1.Append(arrA);
     arr2.Append(arrB);
   end;
-  arr1.Extend(arr2);
-  Writeln(arr1);
+  Writeln(arr1.Len());
+  arr1.Extend(@arr2);
+  //Writeln(arr1);
+  //Writeln('++++++++++++++++++++++++++++++');
   //Writeln(arr2);
-  Writeln(arr1.TotalLen());
+  //Writeln(SizeOf(arr1^^));
+  Writeln(arr1.Len());
 end.
