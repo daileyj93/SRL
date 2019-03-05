@@ -77,7 +77,7 @@ begin
     SetLength(Self, Length(Arr) + L);
     for TPA in Arr do
     begin
-      MemMove(TPA, Self[L], Length(TPA)*SizeOf(TPoint));
+      Self[L].Extend(TPA);
       L += 1;
     end;
   end;
