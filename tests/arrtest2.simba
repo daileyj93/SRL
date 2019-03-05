@@ -1,0 +1,20 @@
+program dj93;
+{$I SRL/OSR.simba}
+var
+  i, j: Integer;
+  arr1, arr2: T2DPointArray;
+  arrA, arrB: TPointArray;
+
+begin
+  ClearDebug();
+
+  for i := 0 to 10 do
+  begin
+    arrA.Append(Point(Random(100), Random(100)));
+    arrB.Append(Point(Random(100), Random(100)));
+  end;
+  arrA.Extend(arrB);
+  //Writeln(arr1);
+  Writeln(Length(ArrA)*SizeOf(arrA[0]));
+  Writeln(SizeOf(arrA));
+end.
