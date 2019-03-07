@@ -68,18 +68,14 @@ end;
 
 procedure T2DPointArray.Extend(Arr:T2DPointArray);
 var 
-  L: Int32;
-  TPA: TPointArray;
+  L, i: Int32;
 begin
   if Length(arr) > 0 then
   begin
     L := Length(Self);
     SetLength(Self, Length(Arr) + L);
-    for TPA in Arr do
-    begin
-      Self[L].Extend(TPA);
-      L += 1;
-    end;
+    for i:=0 to High(Arr) do
+      Self[L+i] := Copy(Arr[i]);
   end;
 end; 
 
