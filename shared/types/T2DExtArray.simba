@@ -70,12 +70,17 @@ begin
 end;
 
 procedure T2DExtArray.Extend(Arr:T2DExtArray);
-var
-  i: Int32;
+var 
+	L, i:Int32;
 begin
-  for i := 0 to High(Arr) do
-    Self := Self + Copy(Arr[i]);
-end;
+  if Length(arr) > 0 then
+  begin
+    L := Length(Self);
+    SetLength(Self, Length(Arr) + L);
+    for i:=0 to High(Arr) do
+      Self[L+i] := Copy(Arr[i]);
+  end;
+end; 
 
 function T2DExtArray.Find(const Value: TExtendedArray): Integer; constref;
 begin
